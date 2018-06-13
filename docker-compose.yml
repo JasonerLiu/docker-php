@@ -48,6 +48,8 @@ services:
             - "9000:9000"
         volumes:
             - "./php/conf/php.ini:/usr/local/etc/php/php.ini"
+            - "./php/conf/php-fpm.conf:/usr/local/etc/php-fpm.conf"
+            - "./php/conf/php-fpm.d:/usr/local/etc/php-fpm.d"
             - "./html:/var/www/html"
         links:
             - mysql
